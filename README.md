@@ -203,3 +203,10 @@ curl http://127.0.0.1:5000/movies/5 -X PATCH --header 'Authorization: Bearer ADD
   "success": true
 }
 ```
+## Endpoints
+To run tests, execute:
+
+```bash
+python3 test_app.py
+```
+* if you experience errors, run the files in .env before running python3 test_app.py
