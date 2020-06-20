@@ -1,4 +1,8 @@
-# Getting Started
+# The Casting Agency
+
+The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. You are an Executive Producer within the company and are creating a system to simplify and streamline your process.
+
+## Getting Started
 
 Heroku link: https://castingcapstone.herokuapp.com/
 
@@ -49,7 +53,7 @@ flask run --reload
 * DELETE '/movies/<int:movie_id>'
 
 
-### GET Actors
+#### GET Actors
 curl http://127.0.0.1:5000/actors
 ```
 {
@@ -101,7 +105,7 @@ curl http://127.0.0.1:5000/actors
 }
 ```
 
-### GET Movies
+#### GET Movies
 curl http://127.0.0.1:5000/movies
 ```
 {
@@ -136,7 +140,7 @@ curl http://127.0.0.1:5000/movies
 } 
 ```
 
-### POST Actor 
+#### POST Actor 
 curl http://127.0.0.1:5000/actors/create -X POST --header 'Authorization: Bearer ADD_TOKEN_HERE' --header 'Content-Type: application/json' -d '{"name":"New Actor Name", "age": 30, "gender": "Male"}'
 
 ```
@@ -146,7 +150,7 @@ curl http://127.0.0.1:5000/actors/create -X POST --header 'Authorization: Bearer
 }
 ```
 
-### POST Movie
+#### POST Movie
 curl http://127.0.0.1:5000/movies/create -X POST -H "Content-Type: application/json" -d '{"movie_title": "New Movie", "release_year": 2021}'
 curl http://127.0.0.1:5000/movies/create -X POST --header 'Authorization: Bearer ADD_TOKEN_HERE' --header 'Content-Type: application/json' -d '{"movie_title":"New Movie", "release_year": 2020}'
 
@@ -157,7 +161,7 @@ curl http://127.0.0.1:5000/movies/create -X POST --header 'Authorization: Bearer
 }
 ```
 
-### DELETE Actor
+#### DELETE Actor
 curl -X DELETE http://127.0.0.1:5000/actors/5
 curl http://127.0.0.1:5000/actors/10 -X DELETE -H 'Authorization: Bearer ADD_TOKEN_HERE' 
 
@@ -168,7 +172,7 @@ curl http://127.0.0.1:5000/actors/10 -X DELETE -H 'Authorization: Bearer ADD_TOK
 }
 ```
 
-### DELETE Movie
+#### DELETE Movie
 curl http://127.0.0.1:5000/actors/6 -X DELETE -H 'Authorization: Bearer ADD_TOKEN_HERE'
 ```
 {
@@ -177,7 +181,7 @@ curl http://127.0.0.1:5000/actors/6 -X DELETE -H 'Authorization: Bearer ADD_TOKE
 }
 ```
 
-### PATCH Actor
+#### PATCH Actor
 curl http://127.0.0.1:5000/actors/7 -X PATCH --header 'Authorization: Bearer ADD_TOKEN_HERE' --header 'Content-Type: application/json' -d '{"name":"New Updated Name", "age": 40, "gender": "Male"}'
 ```
 {
@@ -186,7 +190,7 @@ curl http://127.0.0.1:5000/actors/7 -X PATCH --header 'Authorization: Bearer ADD
 }
 ```
 
-### PATCH Movie
+#### PATCH Movie
 curl http://127.0.0.1:5000/movies/5 -X PATCH --header 'Authorization: Bearer ADD_TOKEN_HERE' --header 'Content-Type: application/json' -d '{"movie_title":"New Updated Title", "release_year": 2050}'
 ```
 {
