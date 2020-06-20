@@ -42,6 +42,11 @@ export FLASK_APP=app.py FLASK_DEBUG=True
 flask run --reload
 ```
 
+## Roles
+* Casting Assistant - Can view actors and movies
+* Casting Director - All permissions a Casting Assistant, can add or delete an actor from the database
+* Executive Producer - All permissions a Casting Director has, can add or delete a movie from the database, AND can modify actors or movies
+
 ## Endpoints
 * GET '/actors'
 * GET '/movies'
