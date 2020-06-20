@@ -34,27 +34,20 @@ This will install all of the required packages we selected within the `requireme
 To run the server, execute:
 
 ```bash
-export FLASK_APP=app.py
+export FLASK_APP=app.py FLASK_DEBUG=True
 flask run --reload
 ```
 
 ## Endpoints
-GET '/actors'
-GET '/movies'
-POST '/actors/create'
-POST '/movies/create'
-PATCH '/actors/<int:actor_id>'
-PATCH '/movies/<int:movie_id>'
-DELETE '/actors/<int:actor_id>'
-DELETE '/movies/<int:movie_id>'
+* GET '/actors'
+* GET '/movies'
+* POST '/actors/create'
+* POST '/movies/create'
+* PATCH '/actors/<int:actor_id>'
+* PATCH '/movies/<int:movie_id>'
+* DELETE '/actors/<int:actor_id>'
+* DELETE '/movies/<int:movie_id>'
 
-
-### To run the server, execute:
-
-```bash
-export FLASK_APP=app.py FLASK_DEBUG=True
-flask run --reload
-```
 
 ### GET Actors
 curl http://127.0.0.1:5000/actors
@@ -175,7 +168,6 @@ curl http://127.0.0.1:5000/actors/10 -X DELETE -H 'Authorization: Bearer ADD_TOK
 }
 ```
 
-
 ### DELETE Movie
 curl http://127.0.0.1:5000/actors/6 -X DELETE -H 'Authorization: Bearer ADD_TOKEN_HERE'
 ```
@@ -185,14 +177,16 @@ curl http://127.0.0.1:5000/actors/6 -X DELETE -H 'Authorization: Bearer ADD_TOKE
 }
 ```
 
-PATCH Actor
+### PATCH Actor
 curl http://127.0.0.1:5000/actors/7 -X PATCH --header 'Authorization: Bearer ADD_TOKEN_HERE' --header 'Content-Type: application/json' -d '{"name":"New Updated Name", "age": 40, "gender": "Male"}'
+```
 {
   "actor": 7, 
   "success": true
 }
+```
 
-PATCH Movie
+### PATCH Movie
 curl http://127.0.0.1:5000/movies/5 -X PATCH --header 'Authorization: Bearer ADD_TOKEN_HERE' --header 'Content-Type: application/json' -d '{"movie_title":"New Updated Title", "release_year": 2050}'
 ```
 {
