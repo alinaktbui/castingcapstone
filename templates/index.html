@@ -1,0 +1,18 @@
+{% extends 'layouts/page.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+<div class="row">
+	<div class="col-sm-4">
+        <h1>Casting Agency</h1>
+		<!-- <h3>
+		 We create movies and superstars ✨ 
+        </h3> -->
+        <h3>Find actors and movies ✨</h3>
+        <br>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis ullamcorper ipsum eu commodo. Duis vel pretium quam, eget faucibus felis. Nunc tempor bibendum mi efficitur cursus. Cras venenatis iaculis mollis. Aliquam luctus rhoncus magna vitae auctor. In tincidunt pretium elit nec lacinia. Mauris a cursus nunc, ac porta ex. Sed ultrices elementum magna. Aliquam quis leo id ligula laoreet rutrum porta vitae augue. Nam ultricies enim eu suscipit sodales.</p>
+	</div>
+	<div class="col-sm-4 hidden-sm hidden-xs">
+		<img id="front-splash" src="{{ url_for('static',filename='img/lalaland.jpg') }}" width=450px alt="Front Photo of Musical Band" />
+	</div>
+</div>
+{% endblock %}
