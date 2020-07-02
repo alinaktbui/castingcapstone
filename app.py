@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, abort, jsonify, session
+from flask import Flask, request, abort, jsonify, session, render_template
 from models import Movie, Actor, setup_db, db
 from flask_cors import CORS
 from auth import AuthError, requires_auth
@@ -21,9 +21,17 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return jsonify({
+        data = jsonify({
             'success': True,
         }), 200
+
+        return render_template('index.html')
+
+    # @app.route('/')
+    # def index():
+    #     return jsonify({
+    #         'success': True,
+    #     }), 200
 
 # GET all actors
     @app.route('/actors')
