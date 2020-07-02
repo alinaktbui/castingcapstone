@@ -19,19 +19,19 @@ def create_app(test_config=None):
                              'GET, POST, PATCH, DELETE, OPTIONS')
         return response
 
-    # @app.route('/')
-    # def index():
-    #     data = jsonify({
-    #         'success': True,
-    #     }), 200
-
-    #     return render_template('index.html')
-
     @app.route('/')
     def index():
-        return jsonify({
+        data = jsonify({
             'success': True,
         }), 200
+
+        return render_template('index.html')
+
+    # @app.route('/')
+    # def index():
+    #     return jsonify({
+    #         'success': True,
+    #     }), 200
 
 # GET all actors
     @app.route('/actors')
